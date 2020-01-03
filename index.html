@@ -1,0 +1,154 @@
+<html> 
+    <head>
+        <title>HTML/CSS: The Basics</title> 
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header> 
+            <h1>HTML/CSS projects: The Basics</h1> 
+            <p>Follow these instructions to create a basic webpage using HTML and CSS.</p>
+            <p class="author">Written by: Lizzy Cooper<br>
+            31 January 2020</p>
+        </header>
+
+        <main>
+            <section name="creating-the-project">
+                <h2>Creating the project</h2>
+                <p class="definition">A "project" is a collection of files written in various 
+                    programming languages that work together to create a webpage or application.</p>
+                <p>Each file will have a file extension that denotes the language 
+                    it is written in. For an HTML/CSS project, you will need at least one 
+                    document with the extension ".html", and one with the extension ".css". 
+                    Here is an example of two typically named documents, in the Visual Studio 
+                    Code application:</p>
+                <figure>
+                <img src="file-names.jpg" title="Two file names, 'index.html' and 'styles.css'">
+                </figure>
+                <p>Each HTML document should have a &lt;html&gt; tag encompassing the entire document. 
+                    This exists so that web browsers know how to interpret the code and display the 
+                    page. Ensure the document has &lt;html&gt; in a line at the start, 
+                    and &lt;/html&gt; in a line at the end.</p>
+                <figure>
+                <pre><code>
+&lt;html&gt;
+ALL THE CODE IN THE DOCUMENT GOES HERE! 
+&lt;/html&gt;
+<br></code></pre>
+                </figure>
+                
+                <a href="#html-tags"><p class="link">Don't know what a "tag" is?</p></a>
+                </section>
+
+            <section name="html-doc-head">
+                <h2>HTML document head</h2>
+                <p class="definition">The HTML document head contains important information, that doesn't 
+                    necessarily render to the webpage the same way that the rest of the content does.
+                Examples below will make this more clear.</p> 
+                <p>Just below the initial &lt;html&gt; tag, insert an opening and closing tag 
+                    like &lt;head&gt; &lt;/head&gt;. All information in the head should be contained between
+                    these tags.<br></p>
+                <figure>
+                <pre><code>
+&lt;html&gt;
+&lt;head&gt;HEADER CODE GOES HERE!&lt;/head&gt; 
+&lt;/html&gt;
+<br></code></pre>
+                </figure>
+                    <p>Here are some examples of what headers should be used for.</p>
+
+                <h3>1. The title of the page</h3>
+                <p class="indent">The title of <em>this</em> webpage is "HTML/CSS: The Basics". 
+                    Notice that it's subtley different to the big 'title' at the top of this 
+                    page, so where can you see it?</p>
+                <figure>
+                <img src="page-name.jpg" title="The page title">
+                </figure>
+                <p class="indent">It actually displays on the browser tab, and on the taskbar
+                    when the current tab is selected.<br><br>
+                This is how we wrote the title of this page:</p>
+                <figure>
+                    <pre><code>
+&lt;head&gt;
+&lt;title&gt;HTML/CSS: The Basics&lt;/title&gt; 
+&lt;/head&gt;
+<br></code></pre>
+                </figure>
+
+                <h3>2. Linking to a stylesheet</h3>
+                <p class="indent">
+                    The CSS document you created in the <a href=#creating-the-project>above 
+                        section</a> will be the stylesheet for the HTML document you create.
+                        Without a linked stylesheet, the browser will render the HTML
+                        as simply as possible, all in black Times New Roman.
+                        <br><br>Link to the CSS stylesheet as follows in the header section. 
+                        If you have named your stylesheet something other than "styles.css", 
+                        you will need to substitute the name.</p>
+                <figure>
+                    <pre><code>
+&lt;head&gt;
+&lt;title&gt;TITLE GOES HERE (as above)&lt;/title&gt; 
+&lt;link rel="stylesheet" type="text/css" href="styles.css"/&gt;
+&lt;/head&gt;
+                    </code></pre>
+                </figure>
+                <p class="indent">'Link' is a <em>self-closing tag</em>. It contains some
+                attributes inside it, and does not need extra information between
+            an opening and closing tag.
+        <br><br>Also note that you do not have to write your own stylesheet from scrach!
+        External stylesheets can be downloaded, giving you default displays for each 
+    type of input. </p>
+
+            </section> 
+
+            <section name="html-tags">
+                <h2>HTML tags</h2>
+                <p>Here are some basic HTML tags that you can use to create a webpage.</p>
+                
+                <table>
+                    <col style="width:40%">
+                    <col style="width:60%">
+                    <tr>
+                        <th>HTML tag</th>
+                        <th>Name and definition</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;p&gt;<em>TEXT GOES HERE</em>&lt;/p&gt;</td>
+                        <td>Paragraph: renders the text to the webpage in a small font. 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;em&gt;<em>TEXT GOES HERE</em>&lt;/em&gt;</td>
+                        <td>Emphasis: italicises or bolds a part of the text.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;h1&gt;<em>TEXT GOES HERE</em>&lt;/h1&gt;</td>
+                        <td>Heading: the largest heading is h1, and h2 is slightly smaller, etc.
+                            H6 is the smallest heading.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">&lt;figure&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<em>LINK-TO-IMAGE.jpg</em>" title="<em>TITLE HERE</em>"&gt; <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;figcaption&gt;<em>CAPTION HERE</em>&lt;/figcaption&gt;<br>
+                            &lt;/figure&gt;<br><br>
+                            There are a number of tags and attributes to define here.</td>
+                        <td><b>Figure:</b> an inserted object (an image is just one example) that may
+                            have a caption or other attributes.
+                        </td>
+                    </tr>
+                    <tr><td><b>Image:</b> the linked image will render on the page. Images can be
+                        stored locally (in the project folder), or can be linked from 
+                        external sources (e.g. Google).</td></tr>
+                        <tr><td><b>Title:</b> If the browser has a problem displaying the image, the title 
+                            will display instead. Visually impaired people can also read the title. 
+                            Figcaption: A caption that will display on the page near the image (or 
+                            other figure).</td></tr>
+                </table>
+
+            </section>
+        </main>
+    </body>
+</html>
